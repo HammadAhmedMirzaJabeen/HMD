@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Web Development</title>
+   
+    <link rel="stylesheet" href="requirementsstyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png" >
+
+</head>
+<body>
+    <div class="container"></div>
+    <div class="nav">
+        <nav>
+          
+            <div class="navlogo">
+            <a href="Profile_Company.html">
+                <img src="logo.png" alt="Hot Beans" width="135" height="75">
+            </div>
+            
+            
+             <div class="navlinks">
+                <ul>
+                    <a href="Profile_Company.html">Home</a>
+                    <a href="Courses.html">Courses</a>
+                    <a href="Qualifications&Requirement.html">Apply</a>
+                    <a href="ContactUs.html">Contact Us</a>
+                    <a href="OurTeam.html">Our Team</a>
+                </ul>
+            </div>
+          
+            
+
+   
+                <div class="menu">
+                    <label for="chk1">
+                        <i class="fa fa-bars"></i>
+                    </label>
+                </div>
+
+        </nav>
+   
+    
+        <div class="courses">
+            <h1> Courses</h1>
+        </div>
+            
+            <div class="tab">
+                <button class="tablinks" onclick="Job(event, 'FEdev')">▶  Front-End Developer</button>
+                <button class="tablinks" onclick="Job(event, 'BEdev')">▶  Back-End Developer</button>
+                <button class="tablinks" onclick="Job(event, 'FSdev')">▶  Full-Stack Developer</button>
+                <button class="tablinks" onclick="Job(event, 'SofDev')">▶  Software Developer</button>
+            </div>
+            <div id="FEdev" class="tabcontent"  >
+                <h3>Front-End Developer</h3>
+                <p>Front-end Developers creates the user interface (UI) that determines what each part of a site or application does and how it will look. </p>
+                <h3>Experience</h3>
+                <p>• HTML&CSS<br>• Java<br>• Javascript<br>• PHP<br></p>
+            </div>
+
+            <div id="BEdev" class="tabcontent">
+                <h3>Back-End Developer</h3>
+                <p>The back- end of a website consists of a server, an application, and a database. A back-end developer builds and maintains the technology that powers those components which, together, enable the user-facing side of the website to even exist in the first place.</p> 
+                <h3>Experience</h3>
+                <p>• Knowledge about servers<br>• HTML&CSS<br>• PHP<br>• APIs</p>
+            </div>
+
+            <div id="FSdev" class="tabcontent">
+                <h3>Full-Stack Developer</h3>
+                <p>Full-stack developers design and create websites and applications for various platforms. A full-stack developer's job description might include the following: Develop and maintain web services and interfaces. Contribute to front-end and back-end development processes. </p>
+                <h3>Experience</h3>
+                <p>• Strong knowledge of Coding Language<br>• Knowledge of frameworks (Nodejs, Django, C++ and more)<br>• DBMS (SQL)<br>• Backend Technologies<br>• Saas</p>
+            </div>
+            <div id="SofDev" class="tabcontent">
+                <h3>Software Developer</h3>
+                <p>Analyze users' needs and then design and develop software to meet those needs. Recommend software upgrades for customers' existing programs and systems. Design each piece of an application or system and plan how the pieces will work together</p>
+                <h3>Experience</h3>
+                <p>• Advanced Programming<br>• Mathematics<br>• Analytical thinking<br>• Complex problem-solving skills<br>• Technician skills</p>
+            </div>
+            
+            <script>
+                function Job(evt, title) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(title).style.display = "block";
+                    evt.currentTarget.className += " active";
+                    }
+            </script>
+        </div>
+        
+        <div class="appform">
+            <h2>Application</h2>
+            <form name="form1" action="" onsubmit="return validateEntry()">
+                <select name="jobtile">
+                    <option value="FEdev">Front-End Web Developer</option>
+                    <option value="BEdev">Back-End Web Developer</option>
+                    <option value="FSdev">Full-Stack Web Developer</option>
+                    <option value="SofDev">Software Developer</option>
+                </select><br>
+                <div class="textincolumn-left">
+                    <div class="textin">
+                        First Name<br><input type="text" name="fname" placeholder="First Name">
+                    </div>
+                    <div class="textin">
+                        Email Adress<br><input type="text" name="email" placeholder="example@gmail.com">
+                    </div>
+                </div>
+                <div class="textincolumn-right">
+                    <div class="textin">
+                        Surname<br><input type="text" name="lname" placeholder="Surname">
+                    </div>
+                    <div class="textin">
+                        Phone Number <br><input type="text" name="phoneno" placeholder="00000 000000">
+                    </div>
+                </div>
+                <div class="cv">
+                    Upload CV<br>
+                    <input id="txt" type = "text" placeholder="File Path" onclick ="javascript:document.getElementById('file').click();">
+                    <input id="txt" type="button" value = "Upload File" 
+                    onclick ="javascript:document.getElementById('file').click();">
+                    <input id = "file" type="file" style='visibility: hidden;' name="img" onchange="ChangeText(this, 'txt');"/>
+                </div>
+                <input type="submit" value="Submit Application">
+            </form>
+        </div>
+        
+        <script>
+            function myFunction() {
+            var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+        x.style.display = "block";
+        }
+        }
+            
+        function ChangeText(oFileInput, sTargetID) {
+        document.getElementById(sTargetID).value = oFileInput.value;
+        }
+
+        function validateEntry() {
+            //var fn = document.getElementById('fname').value;
+            var fn = document.forms["form1"]["fname"].value;
+            //alert(fn);
+            if (fn == null || fn == "") { alert("Please enter the First name"); }
+                        
+            var ln = document.forms["form1"]["lname"].value;
+            //alert(ln);
+            if (ln == null || ln == "") { alert("Please enter the Surname"); }
+
+            var p = document.forms["form1"]["phoneno"].value;
+            //alert(ln);
+            if (p == null || p == "") { alert("Please type the valid phone number"); }
+            if (p.length > 11) { alert("Please type the valid numbers"); }
+                        
+
+        }
+        </script>
+
+        <div class="footercolor">
+            <img src="dcd7ca.png" style="height: 200px; width: 100%;" >
+        </div>
+    
+        <div class="coursesfooter">
+    
+            <div class="footerlogo">           
+                <img src="logo.png"  alt="HotBeans" style="position:relative; right: -150; top: -150; width: 99; height: -170">
+            </div>    
+    
+    
+            <div class="footerlinks" >
+    
+                <div class="link1">
+                    <a href="Profile_Company.html">Home</a>              
+                </div>
+    
+                <div class="link2">
+                    <a href="Courses.html">Courses</a>
+                </div>
+    
+                <div class="link3">
+                    <a href="Apply.html">Apply</a>
+                </div>
+    
+                <div class="link4">
+                    <a href="ContactUs.html">Contact Us</a>
+                </div>
+    
+                <div class="link5">
+                    <a href="OurTeam.html">Our Team</a>  
+                </div>
+    
+                <div class="fb">
+                    <a href="https://www.facebook.com"> <img style="height: 60px; width: 90px;" src="fb.png" alt="Facebook"></a>
+                </div>
+                
+                <div class="linkedin">                
+                    <a href="https://www.linkedin.com/"> <img style="height: 53px; width: 53px;" src="linkedin2.png" alt="Linkedin"></a>
+                </div>
+    
+                <div class="pinterest">
+                    <a href="https://www.pinterest.co.uk/"> <img style="height: 70px; width: 70px;" src="pinterest.png" alt="Pinterest"></a>
+                </div>
+    
+                <div class="copyright">
+                    <p> Copyright © 2023 HMD. All rights reserved.</p>
+                </div>    
+    
+                <div class="email">
+                    <a href="mailto:2108237@stockport.tcg.ac.uk" >
+                     <img src="email.png" alt="Email us" style="height: 52px; width: 51;" >  
+                  </div>
+    
+    
+    
+            </div>
+    
+    
+    
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+    

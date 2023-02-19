@@ -1,0 +1,485 @@
+/*MAIN PAGE*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif, 'Courier New', Courier, monospace;
+    max-width: 100%;
+
+}
+
+/*Navigation*/
+
+.bar{
+    height: 100px;
+}
+
+/*nav bar*/
+nav{
+    width:100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px #202A44;
+    background: #202A44;
+    border-collapse: collapse;
+   
+}
+
+.navlogo{
+    flex: 1;
+    color:#000000;
+    left: 90px; 
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+
+ .search-box{
+    flex: 0.4;
+      position: absolute;
+    top: 0;
+
+    left: 1650px;
+}
+.search-box input{
+    width: 250px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background:#dcd7ca;
+    border-radius: 20px;
+    color:#363636;
+    padding-left: 1px;
+    padding-right: 40px;
+    text-align: center;
+    
+
+     
+}
+ 
+.search-box button{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border:none;
+    position: absolute;
+    top:0;
+    right: 0;
+    transform: scale(0.9);
+    background: rgb(39, 40, 39);
+    color: #ffffff;
+}
+ ul {
+    flex:2;
+    display: flex;
+    justify-content: space-evenly;
+}
+/* IMPORTANT LINES ARE UNDER (REMOVE THIS LINE) */
+  a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 9px 12px;
+    
+}
+
+a:hover {
+ text-shadow: -1px 4px 6px rgb(88, 88, 88);
+ color: #fecc4d;
+}
+
+
+ .menu{
+    font-size: 2.5em;
+    display: none;
+}
+@media(max-width:1000px){
+    .search-box button{
+        position: absolute;
+    }
+     nav .links{
+        position: fixed;
+        top:100px;
+        right: -100%;
+        background: rgba(0,0,0,0.5);
+        height: calc(100vh - 100px);
+        width:50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+        
+    }
+
+     
+
+    nav.menu{
+           position: relative;
+           top: 50px;
+           display: block;
+     width:100px;
+     text-align: center;
+    
+    }
+}
+    /*Profiles*/
+    .Profiles { 
+        margin-top: -60%;
+    }
+    .Profiles h4{
+        font-size: 120%;
+        margin: 2%;
+    }
+    .Profiles h5{
+        font-size: 100%;
+        margin :1%;
+    }
+    .head{
+        text-align: center
+    }
+    
+    .Profiles-row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .profile{
+        width: 20%;
+        background-color: #4682b4;
+        padding: 1%;
+        margin: 1%
+    }
+    .profile img{
+        width: 100%;
+    }
+
+
+
+    /*Courses*/
+.courses{
+    margin-top: 0px;
+}
+
+    .Courses p{
+        margin-left: 10%;
+    }
+    .Courses-top h2{
+        margin-left: 10%;
+    }   
+    .Courses-bottom{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 80%;
+        margin-top: 3%;
+        padding-top: 1%;
+        background-color: steelblue;
+    }  
+    .Courses-bottom h2{
+        padding-left: 7%;
+    }
+    .Courses-top img{
+        float: right;
+        width: 500px;
+        margin-right: 10%;
+        padding-top: 3%;
+    }
+
+    .Courses-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .Courses-links img{
+        width: 90%;
+
+    }
+    
+    /*Careers*/
+    .careers{
+        margin-top:10%;
+    }
+    .careers h1{
+
+        text-align: center;
+    }
+    .careers h2{
+        margin-left :10%;
+    }
+
+    .tab {
+        margin-left :10%;
+        margin-right: 10%;
+        overflow: hidden;
+        margin-top: 90px;
+    }
+
+    .tab button {
+        background-color: steelblue;
+        width: 25%;
+        float: left;
+        border: none;
+        outline: none;
+        padding: 14px 16px;
+        font-size: 17px;
+    }
+
+    .tab button:hover {
+        background-color: lightgray;
+    }
+
+    .tab button.active {
+        background-color: lightgray;
+    }
+
+    .tabcontent {
+        display: none;
+        color : darkslategrey;
+        font-family: "Open Sans"; font-style: normal;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+        margin-left :10%;
+        margin-right: 10%;
+        background-color: lightgray;
+    }
+    
+    .appform{
+        padding-top: 1%;
+        width: 80%;
+        margin-left: 10%;
+        font-family: "Open Sans"; font-style: normal;
+        margin-top: -7px;
+        
+    }
+    .appform h2{
+        text-align: center;
+        color: #202A44;
+    }
+    
+    .appform select {
+        width: 90%;
+        margin-left:5%;
+        font-size: 18px;
+    }
+    
+    .textincolumn-left{
+        width: 40%;
+        float: left;
+        margin-left: 5%;
+    }
+    .textincolumn-right{
+        width: 40%;
+        float: right;
+        margin-right: 6%;
+    }
+    .textin{
+        margin-top: 4%;
+        text-align: center;
+    }
+    
+    .appform input[type=text]{
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    .appform input[type=file]{
+        margin-top:20px;
+        margin-left: 5%;
+        width: 100%;
+    }
+    .cv{
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        margin-top: 23px;
+    }
+    .cv input[type=text]{
+        width:79%;
+        margin-top: 5px:
+    }
+    .cv input[type=button]{
+        border: none;
+        width: 10%;
+        padding: 7px;
+        margin-top: 5px;
+    }
+    .appform input[type=submit]{
+        width: 90%;
+        margin-left: 5%;
+        padding: 7px;
+        border: none;
+        font-size: 17px;
+        margin-bottom: 30px;
+        background-color: steelblue
+    }
+    
+    /*Contact Page*/
+    .Contact{
+        margin-top: 10%;
+    }
+    .Contact h1{
+        margin-bottom: 0;
+    }
+    .Contact-social {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-between;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .Contact img{
+        width: 120%;
+    }
+    .eandp{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    .Contact-info {
+        text-align: center;
+        font-size: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
+        background-color: #4682b4;
+        padding: 1%;
+        margin-top: %;
+    }
+    .ContactForm{
+        padding-top: 1%;
+        background-color:;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-left: 5%;
+        padding-bottom: 10px;
+        font-family: "Open Sans"; font-style: normal;
+    }
+    .ContactForm input[type=text], input[type=email]{
+        width: 90%;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    /* Footer */
+
+.footercolor{
+    position:absolute;
+    top: 700px;
+    width: 100%;
+}
+
+.footer {
+    position: absolute;
+    height: 50px;
+    width: 100%;  
+    background-color: rgb(215, 217, 227);
+    top: 1300px;
+ }
+.footerlogo { 
+
+position: absolute;
+left: 760px;
+top: 780px;
+width: 160px;
+height: 110px;
+
+ }
+
+
+ .link1{
+    position: absolute;
+    top: 825px;
+    left: 60px;
+    text-shadow: -1px 4px 6px rgb(88, 88, 88);
+    font-size: 16px;
+ }
+
+ .link2{
+    position: absolute;
+    top: 825px;
+    left: 130px;   
+    text-shadow: -1px 4px 6px rgb(88, 88, 88);
+    font-size: 16px;
+ }
+
+ .link3{
+    position: absolute;
+    top: 825px;
+    left: 230px;
+    text-shadow: -1px 4px 6px rgb(88, 88, 88);
+    font-size: 16px;
+ }
+
+ .link4{
+    position: absolute;
+    top: 825px;
+    left: 300px;
+    text-shadow: -1px 4px 6px rgb(88, 88, 88);
+    font-size: 16px;
+ }
+
+ .link5{
+    position: absolute;
+    top: 825px;
+    left: 425px;
+    text-shadow: -1px 4px 6px rgb(88, 88, 88);
+    font-size: 16px;
+ }
+ .footerlinks a:hover{
+    color: #fecc4d;
+}
+
+/*Social Media Links */
+
+.fb{
+    position: absolute;
+    top: 807px;
+    left: 1030px;
+}
+
+.linkedin{
+    position: absolute;
+    top: 811px;
+    left: 1130px;
+}
+
+.pinterest{
+    position: absolute;
+    top: 803px;
+    left: 1195px;
+}
+
+.email{
+    position: absolute;
+    top: 811px;
+    left: 1293px;
+
+}
+
+/* Copyright © */
+
+.copyright{
+
+    text-align: right;
+    left: 1360px;
+    position: absolute;
+    top: 877px;
+    font-family: Courier New;
+}
+    
+
+

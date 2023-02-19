@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Web Development</title>
+   
+    <link rel="stylesheet" href="companystyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png" >
+</head>
+<body>
+    <div class="container">
+
+    <div class="nav">
+        <nav>
+          
+            <div class="navlogo">
+            <a href="Profile_Company.html">
+                <img src="logo.png" alt="Hot Beans logo" width="165" height="65">
+            </div>
+            
+            
+             <div class="navlinks">
+                <ul>
+                    <a href="Profile_Company.html">Home</a>
+                    <a href="Courses.html">Courses</a>
+                    <a href="Qualifications&Requirement.html">Apply</a>
+                    <a href="ContactUs.html">Contact Us</a>
+                    <a href="OurTeam.html">Our Team</a>
+                </ul>
+            </div>
+          
+            
+
+                <div class="menu">
+                    <label for="chk1">
+                        <i class="fa fa-bars"></i>
+                    </label>
+                </div>
+
+        </nav>
+
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+            
+              <img src="slideshow1.png" style="position:relative;right:-100px; top:50px; width: 1700px; height: 400px">
+            
+            </div>
+            
+            <div class="mySlides fade">
+            
+              <img src="slideshow2.png" style="position:relative;right:-100px; top:50px; width: 1700px; height: 400px">
+            
+            </div>
+            
+            <div class="mySlides fade">
+            
+              <img src="slideshow3.png" style="position:relative;right:-100px; top:50px; width: 1700px; height: 400px">
+            
+            </div>
+
+            <div class="mySlides fade">
+            
+                <img src="slideshow4.png" style="position:relative;right:-100px; top:50px; width: 1700px; height: 400px">
+              
+              </div>
+            
+            </div>
+            <br>
+            
+
+
+            
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span>
+            </div>
+
+            <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 2500); // Change image every 5 seconds
+                }
+                </script>
+
+
+       
+   <div class="firstimage">
+    <img src="intro.png" alt="intro" style="position:relative;right:-100px; top:50px; width: 600px; height: 400px">
+
+   </div>
+
+
+
+
+
+    <div class="secondimage">
+    <img src="snd.png" alt="vision" style="position:relative;right: -900px; top:-40px; width: 650px; height: 400px">
+
+    </div>
+
+        <div class="ph1">
+            <h1>About us</h1>
+        </div>
+
+        <div class="p1">
+            <p> Hot Beans gratified itself on providing efficient web services, including custom website design.<br>
+                We also build complex web applications.<br> We understand your requirements and provide the best possible solution.
+                 <br>We provide very high quality and cost effective solutions for all our customer needs.</p>
+        </div>
+
+        <div class="ph2">
+            <h1>Our Aim</h1>
+        </div>
+
+        <div class="p2">
+            <p>We always wanted to provide our customers with the best possible<br>And we wanted to get very positive feedback from our customers.
+                <br>We strive to do our best by providing our customers with a
+                <br> a high-quality website</p>
+        </div>
+  
+    <div class="footercolor">
+        <img src="dcd7ca.png" style="height: 200px; width: 100%;" >
+    </div>
+
+
+
+    <div class="coursesfooter">
+
+        <div class="footerlogo">           
+            <img src="logo.png"  alt="HotBeans" style="position:relative; right: -150; top: -150; width: 99; height: -170">
+        </div>
+  
+        <div class="footerlinks" >
+  
+            <div class="link1">
+                <a href="Profile_Company.html">Home</a>              
+            </div>
+  
+            <div class="link2">
+                <a href="Courses.html">Courses</a>
+            </div>
+  
+            <div class="link3">
+                <a href="Apply.html">Apply</a>
+            </div>
+  
+            <div class="link4">
+                <a href="ContactUs.html">Contact Us</a>
+            </div>
+  
+            <div class="link5">
+                <a href="OurTeam.html">Our Team</a>  
+            </div>
+  
+            <div class="fb">
+                <a href="https://www.facebook.com"> <img style="height: 60px; width: 90px;" src="fb.png" alt="Facebook"></a>
+            </div>
+            
+            <div class="linkedin">                
+                <a href="https://www.linkedin.com/"> <img style="height: 53px; width: 53px;" src="linkedin2.png" alt="Linkedin"></a>
+            </div>
+  
+            <div class="pinterest">
+                <a href="https://www.pinterest.co.uk/"> <img style="height: 70px; width: 70px;" src="pinterest.png" alt="Pinterest"></a>
+            </div>
+  
+            <div class="copyright">
+                <p> Copyright © 2023 HMD. All rights reserved.</p>
+            </div>  
+  
+            <div class="email">
+              <a href="mailto:2108237@stockport.tcg.ac.uk" >
+               <img src="email.png" alt="Email us" style="height: 52px; width: 51;" >  
+            </div>
+  
+  
+  
+        </div>
+  
+    </section>
+    <!-- footer copy right section end -->
+    </div>
+</div>
+</body>
+</html>

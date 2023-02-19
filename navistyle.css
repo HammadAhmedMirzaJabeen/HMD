@@ -1,0 +1,13 @@
+/* Navigation Bar */
+
+.navlinks a{
+            float: right;
+            padding: 28px 23px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #202A44;
+}
+.navlinks a.hover{
+                  background-color: red;
+                  color: #128da0;
+}
